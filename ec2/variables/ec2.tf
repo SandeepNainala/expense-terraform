@@ -1,6 +1,7 @@
 resource "aws_instance" "db" {
-  ami           = ami-090252cbe067a9e58
-  instance_type = "t2.micro"
+  ami           = var.image_name
+  instance_type = var.instance_type
+  # left side things are called as arguments, right side are values.
   vpc_security_group_ids = [aws_security_group.allow_ssh.]
 
   tags = {
