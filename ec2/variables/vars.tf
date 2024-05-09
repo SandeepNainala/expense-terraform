@@ -24,3 +24,16 @@ variable "sg_name" {
 variable "sg_description" {
   default = "Allow SSH traffic port 22"
 }
+
+variable "ssh_port" {
+  default = 22
+}
+
+variable "protocol" {
+  default = "tcp"
+}
+
+variable "allow_cidr" {
+  default = ["0.0.0.0/0"]
+  type = list
+}
