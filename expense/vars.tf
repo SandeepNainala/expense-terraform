@@ -1,3 +1,8 @@
+variable "instance_name" {
+  type = list
+  default = ["db", "backend", "frontend"]
+}
+
 variable "image_name" {
   type = string
   default = "ami-090252cbe067a9e58"
@@ -9,11 +14,11 @@ variable "instance_type" {
   default = "t3.micro"
 }
 
-variable "tags" {
+variable "common_tags" {
   default = {
     Project = "Expense"
     Environment = "dev"
-    Name = "DB"
+    Terraform = "true"
   }
 }
 

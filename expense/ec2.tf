@@ -1,10 +1,17 @@
 resource "aws_instance" "db" {
   ami           = var.image_name
-  instance_type = var.instance_type
+  count = length(var.instance_name)
+  instance_type = var.instance_name[count.index] == "db" ? "t3.small" : "t3.micro"
   # left side things are called as arguments, right side are values.
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
 
-  tags = var.tags
+  tags = merge(
+    var.common_tags,
+    {
+      Name = var.instance_name[count.index]
+      Module = var.instance_name[count.index]
+    }
+  )
 }
 
 resource "aws_security_group" "allow_ssh" {
