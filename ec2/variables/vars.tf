@@ -16,3 +16,11 @@ variable "tags" {
     Name = "DB"
   }
 }
+
+variable "sg_name" {
+  default = "allow_ssh"
+}
+
+variable "sg_description" {
+  default = "Allow SSH traffic port 22"
+}

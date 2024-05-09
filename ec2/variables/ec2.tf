@@ -8,8 +8,8 @@ resource "aws_instance" "db" {
 }
 
 resource "aws_security_group" "allow_ssh" {
-  name        = "allow_ssh"
-  description = "Allow SSH traffic"
+  name        = var.sg_name
+  description = var.sg_description
 
   ingress {
     from_port        = 22
