@@ -2,7 +2,7 @@ resource "aws_instance" "db" {
   ami           = var.image_name
   instance_type = var.instance_type
   # left side things are called as arguments, right side are values.
-  vpc_security_group_ids = [aws_security_group.allow_ssh.]
+  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
 
   tags = var.tags
 }
