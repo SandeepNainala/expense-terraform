@@ -9,3 +9,10 @@ variable "instance_type" {
   default = "t3.micro"
 }
 
+variable "tags" {
+  default = {
+    Project = "Expense"
+    Environment = "dev"
+    Name = "DB"
+  }
+}

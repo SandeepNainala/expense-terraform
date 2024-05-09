@@ -4,9 +4,7 @@ resource "aws_instance" "db" {
   # left side things are called as arguments, right side are values.
   vpc_security_group_ids = [aws_security_group.allow_ssh.]
 
-  tags = {
-    Name = "db"
-  }
+  tags = var.tags
 }
 
 resource "aws_security_group" "allow_ssh" {
