@@ -1,4 +1,4 @@
-resource "aws_instance" "db" {
+resource "aws_instance" "expense" {
   ami           = var.image_name
   count = length(var.instance_name)
   instance_type = var.instance_name[count.index] == "db" ? "t3.small" : "t3.micro"
