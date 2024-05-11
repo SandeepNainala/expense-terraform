@@ -15,3 +15,11 @@ variable "common_tags" {
   }
 }
 
+
+variable "domain_name" {
+  default = "devops91.cloud"
+}
+
+variable "zone_id" {
+  default = "Z03923121KRYC3VZBNNH0"
+}
