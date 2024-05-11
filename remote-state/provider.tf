@@ -9,6 +9,7 @@ terraform {
     bucket = "devops91-terraform"
     key    = "remote-state-demo"
     region = "us-east-1"
+    dynamodb_table = "devops91-terraform-locking"
   }
 }
 
