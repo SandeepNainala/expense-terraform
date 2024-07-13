@@ -1,5 +1,5 @@
 resource "aws_instance" "workstation" {
-  ami           = ami-041e2ea9402c46c32
+  ami           = "ami-041e2ea9402c46c32"
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
 
