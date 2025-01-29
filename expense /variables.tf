@@ -28,3 +28,29 @@ variable "common_tags" {
     }
     type = map(string)
 }
+
+# security group variables
+
+variable "sg_name" {
+    description = "The name of the security group"
+    default = "sg_name"
+    type = string
+}
+
+variable "sg_description" {
+    description = "The description of the security group"
+    default = "sg_description"
+    type = string
+}
+
+variable "ssh_port" {
+    description = "The port to allow SSH traffic on"
+    default = 22
+    type = number
+}
+
+variable "allowed_cidr" {
+    description = "The port to allow HTTP traffic on"
+    default = ["0.0.0.0/0"]
+    type = list(string)
+}
