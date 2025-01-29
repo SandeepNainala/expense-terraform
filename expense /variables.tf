@@ -54,3 +54,16 @@ variable "allowed_cidr" {
     default = ["0.0.0.0/0"]
     type = list(string)
 }
+
+# route53 variables
+variable "domain_name" {
+    description = "The domain name to use for the Route53 zone"
+    default = "devops91.cloud"
+    type = string
+}
+
+variable "zone_id" {
+    description = "The ID of the Route53 zone"
+    default = "Z0689449WJZKR124Q6OZ"
+    type = string
+}
