@@ -9,6 +9,7 @@ terraform {
     bucket = "awsd-78s-remote-state"
     key    = "terraform.tfstate"
     region = "us-east-1"
+    dynamodb_table = "awsd-78s-locking"
   }
 }
 
