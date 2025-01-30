@@ -5,12 +5,13 @@ terraform {
       version = "5.48.0"
     }
   }
+  backend "s3" {
+    bucket = "awsd-78s-remote-state"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+  }
 }
-backend "s3" {
-  bucket = "awsd-78s-remote-state"
-  key    = "terraform.tfstate"
-  region = "us-east-1"
-}
+
 
 #provide authentication here
 provider "aws" {
