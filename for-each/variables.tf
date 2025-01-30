@@ -30,3 +30,15 @@ variable "common_tags" {
     }
     type = map(string)
 }
+
+variable "domain_name" {
+    description = "The domain name to use for the server"
+    default = "devops91.cloud"
+    type = string
+}
+
+variable "zone_id" {
+    description = "The Route 53 zone ID to use for the server"
+    default = "Z0689449WJZKR124Q6OZ"
+    type = string
+}
