@@ -1,3 +1,0 @@
-output "instance_info" {
-  value = var.aws_instance.expense
-}
