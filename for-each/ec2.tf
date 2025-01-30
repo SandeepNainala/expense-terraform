@@ -1,4 +1,4 @@
-resource "aws_instance" "db" {
+resource "aws_instance" "expense" {
     for_each = var.instance_names   # for_each loop to create multiple instances with different names and tags each time
     ami = data.aws_ami.ami_info.id
     vpc_security_group_ids = ["sg-006bc654442a8a0cc"]
